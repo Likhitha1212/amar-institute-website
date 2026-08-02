@@ -1,0 +1,465 @@
+/* =========================================
+   GOOGLE FONT
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* =========================================
+   CSS VARIABLES
+========================================= */
+
+:root{
+
+    --primary:#1E3A8A;
+    --secondary:#2563EB;
+    --accent:#FBBF24;
+    --white:#ffffff;
+    --black:#111827;
+    --gray:#6B7280;
+    --light:#F8FAFC;
+    --border:#E5E7EB;
+
+    --transition:0.3s ease;
+
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--white);
+    color:var(--black);
+    line-height:1.7;
+    overflow-x:hidden;
+
+}
+
+img{
+
+    width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+section{
+
+    padding:100px 10%;
+
+}
+
+.container{
+
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn{
+
+    display:inline-block;
+
+    background:var(--secondary);
+
+    color:white;
+
+    padding:14px 30px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn:hover{
+
+    background:var(--primary);
+
+    transform:translateY(-3px);
+
+}
+
+
+.btn-secondary{
+
+    display:inline-block;
+
+    padding:14px 30px;
+
+    border:2px solid var(--secondary);
+
+    color:var(--secondary);
+
+    border-radius:40px;
+
+    transition:var(--transition);
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--secondary);
+
+    color:white;
+
+}
+
+
+/* =========================================
+   SECTION TITLES
+========================================= */
+
+.section-title{
+
+    text-align:center;
+
+    font-size:2.5rem;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.section-subtitle{
+
+    text-align:center;
+
+    color:var(--gray);
+
+    max-width:700px;
+
+    margin:auto;
+
+    margin-bottom:60px;
+
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:20px 10%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+    z-index:1000;
+
+}
+
+.logo img{
+
+    width:170px;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+.nav-links a{
+
+    font-weight:500;
+
+    transition:var(--transition);
+
+}
+
+.nav-links a:hover{
+
+    color:var(--secondary);
+
+}
+
+
+/*=========================
+Hero Tag
+=========================*/
+
+.hero-tag{
+
+    display:inline-block;
+
+    padding:10px 24px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:50px;
+
+    margin-bottom:25px;
+
+    font-size:.95rem;
+
+    backdrop-filter:blur(8px);
+
+}
+
+
+/*=========================
+Statistics
+=========================*/
+
+.hero-stats{
+
+    margin-top:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.stat-card{
+
+    width:220px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    transition:.4s;
+
+}
+
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.15);
+
+}
+
+
+.stat-card h2{
+
+    color:white;
+
+    font-size:2.3rem;
+
+    margin-bottom:10px;
+
+}
+
+
+.stat-card p{
+
+    color:#E5E7EB;
+
+}
+
+
+/*=========================
+Scroll
+=========================*/
+
+.scroll-down{
+
+    margin-top:60px;
+
+    color:white;
+
+    opacity:.8;
+
+    font-size:.9rem;
+
+    animation:float 2s infinite;
+
+}
+
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/* =========================================
+   PLACEHOLDER SECTIONS
+========================================= */
+
+section:not(.hero){
+
+    background:white;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:40px;
+
+    text-align:center;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:992px){
+
+.hero h1{
+
+    font-size:3rem;
+
+}
+
+.nav-links{
+
+    gap:20px;
+
+}
+
+}
+
+
+@media(max-width:768px){
+
+.navbar{
+
+    padding:20px;
+
+}
+
+.nav-links{
+
+    display:none;
+
+}
+
+.hero h1{
+
+    font-size:2.4rem;
+
+}
+
+.hero{
+
+    padding:120px 30px;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.btn,
+.btn-secondary{
+
+    width:220px;
+
+    margin:auto;
+
+}
+
+section{
+
+    padding:80px 30px;
+
+}
+
+}

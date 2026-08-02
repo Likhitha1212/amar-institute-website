@@ -1,0 +1,213 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+--primary:#0f172a;
+--secondary:#2563eb;
+--accent:#fbbf24;
+--white:#fff;
+--light:#f8fafc;
+--gray:#64748b;
+--transition:.35s ease;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',sans-serif;background:#fff;color:#111827;line-height:1.6}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{display:block;max-width:100%}
+section{padding:100px 10%}
+.container{max-width:1200px;margin:auto}
+
+.navbar{
+position:fixed;top:0;left:0;width:100%;
+display:flex;justify-content:space-between;align-items:center;
+padding:18px 10%;
+background:rgba(255,255,255,.96);
+backdrop-filter:blur(10px);
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+z-index:999;
+}
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+.logo h2{color:var(--primary)}
+.nav-links{display:flex;gap:35px}
+.nav-links a{font-weight:600;transition:var(--transition)}
+.nav-links a:hover{color:var(--secondary)}
+
+.btn,.btn-secondary{
+display:inline-block;
+padding:14px 30px;
+border-radius:40px;
+font-weight:600;
+transition:var(--transition)
+}
+.btn{background:var(--secondary);color:#fff}
+.btn:hover{transform:translateY(-3px);background:#1d4ed8}
+.btn-secondary{border:2px solid var(--secondary);color:var(--secondary)}
+.btn-secondary:hover{background:var(--secondary);color:#fff}
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:140px 10% 100px;
+background:
+linear-gradient(rgba(9,20,45,.82),rgba(9,20,45,.82)),
+url('../images/backgrounds/physics-bg.jpg') center/cover no-repeat;
+color:#fff;
+}
+.hero-content{max-width:900px}
+.hero-tag{
+display:inline-block;
+padding:10px 22px;
+border-radius:30px;
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.18);
+margin-bottom:25px;
+}
+.hero h1{
+font-size:4.8rem;
+font-weight:800;
+line-height:1.1;
+margin-bottom:25px;
+}
+.hero p{
+font-size:1.2rem;
+color:#e2e8f0;
+max-width:800px;
+margin:auto auto 40px;
+}
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.hero-stats{
+margin-top:60px;
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+.stat-card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(14px);
+padding:30px;
+border-radius:20px;
+width:220px;
+border:1px solid rgba(255,255,255,.15);
+transition:.3s;
+}
+.stat-card:hover{
+transform:translateY(-8px);
+background:rgba(255,255,255,.15);
+}
+.stat-card h2{
+font-size:2.4rem;
+margin-bottom:10px;
+}
+.scroll-down{
+margin-top:60px;
+animation:float 2s infinite;
+opacity:.8;
+}
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(10px)}
+100%{transform:translateY(0)}
+}
+
+.section-title{
+font-size:2.6rem;
+text-align:center;
+color:var(--primary);
+margin-bottom:20px;
+}
+.section-subtitle{
+max-width:760px;
+margin:0 auto 40px;
+text-align:center;
+color:var(--gray);
+}
+
+#about,#gallery{background:#f8fafc}
+#features,#courses,#testimonials,#contact{background:#fff}
+
+footer{
+background:var(--primary);
+color:#fff;
+text-align:center;
+padding:35px;
+}
+
+iframe{
+border-radius:15px;
+margin-top:25px;
+}
+
+@media(max-width:992px){
+.hero h1{font-size:3.4rem}
+}
+
+@media(max-width:768px){
+.nav-links{display:none}
+.navbar{padding:20px}
+.hero{padding:120px 25px}
+.hero h1{font-size:2.5rem}
+.hero p{font-size:1rem}
+.hero-buttons{flex-direction:column;align-items:center}
+.btn,.btn-secondary{width:220px;text-align:center}
+section{padding:80px 30px}
+}
+/*=========================
+Gallery
+=========================*/
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+    gap:30px;
+
+    margin-top:50px;
+
+}
+
+.gallery-item{
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+
+    transition:.4s;
+
+}
+
+.gallery-item img:hover{
+
+    transform:scale(1.05);
+
+}
