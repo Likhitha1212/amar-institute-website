@@ -160,6 +160,138 @@
     </div>
 
 </section>
+<!-- Reviews Section -->
+<section id="reviews">
+
+    <div class="container">
+
+        <h2 class="section-title">Student Reviews</h2>
+
+        <p class="section-subtitle">
+            Hear what our students have to say about their learning experience
+            at Amar's Institute of Physics.
+        </p>
+
+        <!-- Reviews will appear here -->
+        <div id="reviews-container" class="reviews-grid">
+
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">
+                    Excellent teaching and very clear explanation of concepts.
+                </p>
+                <h4>Student</h4>
+                <span>Class 12</span>
+            </div>
+
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">
+                    Very helpful guidance and good problem-solving practice.
+                </p>
+                <h4>Student</h4>
+                <span>NEET</span>
+            </div>
+
+        </div>
+
+        <div class="review-button-container">
+            <button
+    type="button"
+    class="btn review-open-button"
+    onclick="document.getElementById('review-modal').classList.add('active')">
+    ⭐ Write a Review
+</button>
+        </div>
+
+    </div>
+
+</section>
+<!-- Review Form Modal -->
+<div id="review-modal" class="review-modal">
+
+    <div class="review-modal-content">
+
+        <button
+            type="button"
+            class="close-review"
+            onclick="document.getElementById('review-modal').classList.remove('active')">
+            &times;
+        </button>
+
+        <h2>Write a Review</h2>
+
+        <p>We'd love to hear about your experience.</p>
+
+        <form id="review-form">
+
+            <label for="review-name">Your Name</label>
+
+            <input
+                type="text"
+                id="review-name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label for="review-class">Class / Course</label>
+
+            <input
+                type="text"
+                id="review-class"
+                name="className"
+                placeholder="e.g. Class 10 / Intermediate / NEET / JEE"
+                required
+            >
+
+
+            <label>Your Rating</label>
+
+            <div class="star-rating" id="star-rating">
+
+                <span data-rating="1">★</span>
+                <span data-rating="2">★</span>
+                <span data-rating="3">★</span>
+                <span data-rating="4">★</span>
+                <span data-rating="5">★</span>
+
+            </div>
+
+            <input
+                type="hidden"
+                id="review-rating"
+                name="rating"
+                value="0"
+            >
+
+
+            <label for="review-text">Your Review</label>
+
+            <textarea
+                id="review-text"
+                name="review"
+                rows="5"
+                placeholder="Write your experience..."
+                required
+            ></textarea>
+
+
+            <button
+                type="submit"
+                class="btn"
+                id="submit-review">
+                Submit Review
+            </button>
+
+            <p id="review-message"></p>
+
+        </form>
+
+    </div>
+
+</div>
 <section id="contact"><div class="container">
 <h2>Contact</h2>
 <p>Flat No C3, Richie Apartment, Behind Sonovision, 3rd Lane Lakshmipuram, Guntur-522007, Andhra Pradesh</p>
@@ -168,7 +300,7 @@
 </div></section>
 
 <footer>© 2026 Amar's Institute of Physics</footer>
-
+<script src="assets/js/script.js"></script>
     <script 
       type="text/javascript"
       src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
